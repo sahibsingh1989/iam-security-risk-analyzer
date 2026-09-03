@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "username": "alice.dev",
+      "mfa_enabled": true,
+      "admin": false,
+      "credential_age_days": 30,
+      "permissions": ["s3:GetObject", "s3:PutObject", "logs:CreateLogStream"],
+      "groups": ["developers"],
+      "last_login": "2026-08-28"
+    },
+    {
+      "username": "bob.contractor",
+      "mfa_enabled": false,
+      "admin": false,
+      "credential_age_days": 45,
+      "permissions": ["ec2:DescribeInstances", "ec2:StartInstances"],
+      "groups": ["contractors"],
+      "last_login": "2026-08-15"
+    },
+    {
+      "username": "carol.admin",
+      "mfa_enabled": true,
+      "admin": true,
+      "credential_age_days": 20,
+      "permissions": ["iam:*", "ec2:*", "s3:*"],
+      "groups": ["platform-admins"],
+      "last_login": "2026-09-01"
+    },
+    {
+      "username": "dave.legacy",
+      "mfa_enabled": false,
+      "admin": true,
+      "credential_age_days": 380,
+      "permissions": ["*"],
+      "groups": ["platform-admins", "developers"],
+      "last_login": "2025-11-10"
+    },
+    {
+      "username": "erin.analyst",
+      "mfa_enabled": true,
+      "admin": false,
+      "credential_age_days": 120,
+      "permissions": ["athena:GetQueryResults", "s3:GetObject"],
+      "groups": ["analysts"],
+      "last_login": "2026-07-30"
+    },
+    {
+      "username": "frank.svc",
+      "mfa_enabled": false,
+      "admin": false,
+      "credential_age_days": 200,
+      "permissions": [
+        "s3:GetObject", "s3:PutObject", "s3:DeleteObject", "s3:ListBucket",
+        "sqs:SendMessage", "sqs:ReceiveMessage", "sqs:DeleteMessage",
+        "dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Query",
+        "lambda:InvokeFunction", "logs:PutLogEvents"
+      ],
+      "groups": ["service-accounts"],
+      "last_login": "2026-08-31"
+    },
+    {
+      "username": "grace.ops",
+      "mfa_enabled": true,
+      "admin": false,
+      "credential_age_days": 95,
+      "permissions": ["cloudwatch:GetMetricData", "ec2:DescribeInstances"],
+      "groups": ["operations"],
+      "last_login": "2026-08-20"
+    },
+    {
+      "username": "heidi.intern",
+      "mfa_enabled": true,
+      "admin": false,
+      "credential_age_days": 10,
+      "permissions": ["s3:GetObject"],
+      "groups": ["interns"],
+      "last_login": "2026-09-02"
+    }
+  ]
+}
